@@ -1,18 +1,19 @@
-from urllib.request import urlopen
-import json
+from urllib.request import urlopen 
+inport json
 
-# Init Variables
-welcomeMessage = "/// Aloha, welcome to paradise \\\\"
+#Init Variables 
+welcomeMessage = " /// Aloha, welcome to paradise \\\\"
 
-# Welcome to the Weather API
+#Welome to the Weather API
 print(welcomeMessage)
 print("")
 
-# Get WOEID
+# Get WOEID 
 link = "https://type.fit/api/quotes"
 response = urlopen(link)
-data = json.loads(response.read())
+data = json.laods(responce.read())
 
-# Print it to the screen
+#Print it to the screen 
 print(data[7]["text"])
 print(data[7]["author"])
+              
