@@ -1,13 +1,18 @@
-from urllib. request import urlopen
+from urllib.request import urlopen
+import json
 
-# Link to website api
-link = 'https://wttr.in/Perth?A'
+# Init Variables
+welcomeMessage = "/// Aloha, welcome to paradise \\\\"
 
-# Gets url and opens it
-wget = urlpoen(link)
+# Welcome to the Weather API
+print(welcomeMessage)
+print("")
 
-# Gets whats on website in clear text
-webtext = wget.read()
+# Get WOEID
+link = "https://type.fit/api/quotes"
+response = urlopen(link)
+data = json.loads(response.read())
 
-#Print it to the screen 
-print(webtext.decode(' utf-8'))
+# Print it to the screen
+print(data[7]["text"])
+print(data[7]["author"])
